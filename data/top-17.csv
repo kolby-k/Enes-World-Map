@@ -1,0 +1,18 @@
+id,address_id,video_id,type,price,bedrooms,bathrooms,square_feet,lot_size,year_built,description,id,url,date_posted,id,street,city,state,country,zip,latitude,longitude
+1,1,1,house,295000000.00,21,49.0,105000,3.83,,,1,https://www.youtube.com/watch?v=U8Cd_McCdow,2022-02-07,1,944 Airole Way,Bel Air,California,USA,90077,34.08809,-118.45155
+2,2,2,penthouse,39500000.00,5,5.2,6127,,,,2,https://www.youtube.com/watch?v=idJthveed1M,2021-03-01,2,30 Park Pl,New York,New York,USA,10007,40.71278,-74.00904
+33,33,33,house,14855000.00,9,19.0,56000,7.39,,,33,https://www.youtube.com/watch?v=e6gb5VZF-3E,2022-11-28,33,2700 Point Drive,Highland Park,Illinois,USA,60035,42.20174,-87.83754
+34,34,34,penthouse,250000000.00,7,11.0,17545,,,,34,https://www.youtube.com/watch?v=aN9DH_GxqEo,2023-05-08,34,217 W 57th St,New York,New York,USA,10019,40.76617,-73.98090
+35,35,35,house,141000000.00,9,12.0,32291,6.18,,,35,https://www.youtube.com/watch?v=1lqfF6wOkMc,2021-11-22,35,166 Bd Leader,Cannes,Provence-Alpes-Côte d'Azur,France,,43.55788,6.98660
+36,36,36,house,54950000.00,5,8.0,15642,0.67,,,36,https://www.youtube.com/watch?v=AfSWldaT-AE,2021-06-14,36,1301 Collingwood Pl,Los Angeles,California,USA,90069,34.09440,-118.38363
+37,37,37,house,45000000.00,7,12.0,18000,1.26,,,37,https://www.youtube.com/watch?v=bumsIF8hbi0,2021-07-05,37,1047 N Bundy Dr,Brentwood,California,USA,90049,34.07854,-118.48302
+38,38,38,house,32500000.00,4,9.0,12822,0.88,,,38,https://www.youtube.com/watch?v=Us8mDKUaX2M,2021-09-06,38,2738 Carina Way,Henderson,Nevada,USA,89052,35.97975,-115.10676
+39,39,39,house,139000000.00,12,18.0,36000,2.00,,,39,https://www.youtube.com/watch?v=3bNgyOSNH_U,2022-05-14,39,1200 Bel Air Road,Los Angeles,California,USA,90077,34.09519,-118.44365
+40,40,40,house,44000000.00,7,7.4,12255,3.30,,,40,https://www.youtube.com/watch?v=haZegPp6gck,2020-11-30,40,2500 West Lake Boulevard,Tahoe City,California,USA,96141,39.12931,-120.16043
+41,41,41,house,25900000.00,6,6.1,12377,49.11,,,41,https://www.youtube.com/watch?v=Mw_AJOYzt0w,2022-06-27,41,7600 Deer Knoll Dr,Kamas,Utah,USA,84036,40.54878,-111.13551
+42,42,42,house,25000000.00,3,9.0,15000,1.26,,,42,https://www.youtube.com/watch?v=JpoeEtZCgFA,2021-08-21,42,685 Dragon Peak Dr,Henderson,Nevada,USA,89012,35.99952,-115.05165
+43,43,43,house,12000000.00,6,8.0,21692,35.01,,,43,https://www.youtube.com/watch?v=j5aFoPmFIT4,2021-06-28,43,600 Chateau V Road,Evergreen,Colorado,USA,80439,39.62232,-105.39587
+44,44,44,house,47000000.00,7,10.0,17567,4.97,,,44,https://www.youtube.com/watch?v=01QgNRm2OYg,2022-04-25,44,253 White Pine Canyon Rd,Park City,Utah,USA,84060,40.64797,-111.55159
+45,45,45,house,39500000.00,5,6.1,8021,12.55,,,45,https://www.youtube.com/watch?v=TIpZbyMtbxg,2022-09-26,45,,Oil Nut Bay,Virgin Gorda,British Virgin Islands,,18.49806,-64.32806
+46,46,46,house,79995000.00,9,17.0,25963,1.50,,,46,https://www.youtube.com/watch?v=4IId792kUp0,2021-07-12,46,2325 S Ocean Blvd,Delray Beach,Florida,USA,33483,26.43228,-80.06310
+47,47,47,house,2700000.00,4,4.1,10100,0.18,,,47,https://www.youtube.com/watch?v=W2-uo7ZdBwI,2022-02-14,47,,Zihuatanejo,Guerrero,Mexico,,17.61417,-101.55333
