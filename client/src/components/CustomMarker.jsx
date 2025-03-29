@@ -13,7 +13,6 @@ function CustomMarker() {
 
   // When a marker is clicked:
   const handleMarkerClick = (key) => {
-    console.log("Click: ", key);
     if (markerVisibility === key) {
       setMarkerVisibility(null);
     } else {
@@ -60,7 +59,7 @@ function CustomMarker() {
           ref={(marker) => setMarkerRef(marker, l.id)}
           onClick={() => handleMarkerClick(l.id)}
         >
-          <img src={PIN_ICONS[l.type]} height={40} width={40} />
+          <img src={PIN_ICONS[l.type]} height={60} width={"auto"} />
           {markerVisibility === l.id && (
             <InfoWindow
               anchor={markers[l.id]}

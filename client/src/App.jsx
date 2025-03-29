@@ -5,10 +5,7 @@ import { APIProvider } from "@vis.gl/react-google-maps";
 
 function App() {
   return (
-    <APIProvider
-      apiKey={import.meta.env.VITE_GOOGLE_API_KEY}
-      onLoad={() => console.log("Maps API has loaded.")}
-    >
+    <APIProvider apiKey={import.meta.env.VITE_GOOGLE_API_KEY}>
       <main>
         <BaseMap />
       </main>

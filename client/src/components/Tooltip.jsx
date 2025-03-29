@@ -74,9 +74,7 @@ const Tooltip = ({
       </p>
       <span id="video-thumbnail">
         <a href={url} target="_blank" style={{ display: "flex", flex: 1 }}>
-          <a id="watch-button" href={url} target="_bank">
-            Watch Video
-          </a>
+          <button id="watch-button">Watch Video</button>
           <img
             src={YouTubeThumbnail()}
             alt="Youtube Thumbnail"

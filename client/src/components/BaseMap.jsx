@@ -1,23 +1,31 @@
-import { Map } from "@vis.gl/react-google-maps";
-import React from "react";
+import { Map, useMap } from "@vis.gl/react-google-maps";
+import React, { useState } from "react";
 import CustomMarker from "./CustomMarker";
+import SideMenu from "./SideMenu";
 
 function BaseMap() {
+  const [menuVisible, setMenuVisible] = useState(true);
+
   return (
-    <div id="base-map">
-      <Map
-        mapId="cece348358613a57"
-        defaultZoom={5}
-        defaultCenter={{ lat: 38.048615, lng: -118.070847 }}
-        onCameraChanged={(ev) =>
-          console.log(
-            `carmera changed: ${ev.detail.center}, zoom: ${ev.detail.zoom}`
-          )
-        }
-      >
-        <CustomMarker />
-      </Map>
-    </div>
+    <>
+      <SideMenu
+        visible={menuVisible}
+        onClose={() => setMenuVisible(false)}
+        onOpen={() => setMenuVisible(true)}
+      />
+      <div id="base-map">
+        <Map
+          mapId="cece348358613a57"
+          defaultZoom={3}
+          colorScheme="LIGHT"
+          defaultCenter={{ lat: 25.683, lng: -32.858 }}
+          disableDefaultUI
+          mapTypeControl={false}
+        >
+          <CustomMarker />
+        </Map>
+      </div>
+    </>
   );
 }
 
