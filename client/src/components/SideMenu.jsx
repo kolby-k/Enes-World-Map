@@ -1,7 +1,8 @@
+import { useMap } from "@vis.gl/react-google-maps";
 import React from "react";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 
-function SideMenu({ visible, onClose, onOpen }) {
+function SideMenu({ visible, streetViewVisible, onClose, onOpen }) {
   const leftValue = visible ? "0px" : "-350px";
 
   const containerStyle = {
@@ -15,7 +16,7 @@ function SideMenu({ visible, onClose, onOpen }) {
     top: "0px",
     width: "350px",
     height: "100%",
-    backgroundColor: "rgba(203, 230, 230, 0.8)",
+    backgroundColor: "rgba(86, 86, 86, 0.8)",
     backdropFilter: "blur(5px)",
     WebkitBackdropFilter: "blur(5px)",
     zIndex: 10,
@@ -25,11 +26,12 @@ function SideMenu({ visible, onClose, onOpen }) {
     <div style={containerStyle}>
       <AiOutlineMenuUnfold
         size={26}
+        color="#fff"
         style={{
           cursor: "pointer",
           position: "absolute",
           right: -35,
-          top: 20,
+          top: streetViewVisible ? 80 : 20,
           zIndex: 20,
           display: visible ? "none" : "block",
           padding: 20,
@@ -39,6 +41,7 @@ function SideMenu({ visible, onClose, onOpen }) {
       />
       <AiOutlineMenuFold
         size={26}
+        color="#fff"
         style={{
           cursor: "pointer",
           position: "absolute",
@@ -67,27 +70,27 @@ function SideMenu({ visible, onClose, onOpen }) {
           justifyContent: "space-evenly",
           marginRight: 15,
           marginLeft: 15,
+          color: "white",
         }}
       >
         <p>
-          I've always been curious about how wealthy individuals spend their
-          money—especially when it comes to real estate. The massive size and
-          sky-high prices of their homes fascinate me, and I wanted to see it
-          all mapped out.
+          Ever wonder how the ultra-wealthy spend their money when purchasing
+          homes? Using the <b>Google Maps API</b>, I’ve plotted the locations of
+          luxury properties around the globe to answer this question.{" "}
         </p>
         <p>
-          For this project, I pulled data from past videos by{" "}
+          Click a house icon to explore property prices, standout features, and
+          direct links to original video tours.{" "}
+        </p>
+        <p>
+          The data has been gathered from{" "}
           <a href="https://www.youtube.com/@EnesYilmazer" target="_blank">
             Enes Yilmazer
           </a>
-          , a YouTuber I've followed for some time. Using the{" "}
-          <b>Google Maps API</b>, I visualized the locations of these luxury
-          properties around the world. Each pin on the map includes the home's
-          price, key details, and a link to the original video tour by Enes.
+          , a YouTuber known for touring some of the world’s most expensive
+          homes.
         </p>
-        <p>
-          Feel free to navigate the map and click on a house icon to see more!
-        </p>
+
         <div
           style={{
             display: "flex",

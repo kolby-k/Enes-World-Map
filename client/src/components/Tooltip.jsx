@@ -31,11 +31,12 @@ const Tooltip = ({
   const typeLabel = type.charAt(0).toUpperCase() + type.slice(1);
 
   const priceLabel = parseFloat(price).toLocaleString();
+
   return (
     <div id="tooltip">
-      <h2>
+      <h1>
         {city}, {state} | {country}
-      </h2>
+      </h1>
       <h3>{street}</h3>
       <ul>
         <li>

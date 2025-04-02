@@ -1,24 +1,27 @@
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import { AdvancedMarker, InfoWindow, useMap } from "@vis.gl/react-google-maps";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import LOCATIONS from "../constants/locations";
 import PIN_ICONS from "../constants/icons";
 import Tooltip from "./Tooltip";
 
-function CustomMarker() {
+function CustomMarker({ setZoom, setTilt }) {
   const map = useMap();
   const [markers, setMarkers] = useState({});
   const clusterer = useRef(null);
   const [markerVisibility, setMarkerVisibility] = useState({});
 
   // When a marker is clicked:
-  const handleMarkerClick = (key) => {
-    if (markerVisibility === key) {
+  const handleMarkerClick = useCallback(({ event, id }) => {
+    if (markerVisibility === id || !event) {
       setMarkerVisibility(null);
+      setZoom(17);
     } else {
-      setMarkerVisibility(key);
+      setMarkerVisibility(id);
+      setZoom(18);
+      map.panTo(event.latLng);
     }
-  };
+  });
 
   // initialize MarkerClusterer, if the map has changed
   useEffect(() => {
@@ -34,16 +37,16 @@ function CustomMarker() {
     clusterer.current?.addMarkers(Object.values(markers));
   }, [markers]);
 
-  const setMarkerRef = (marker, key) => {
-    if (marker && markers[key]) return;
-    if (!marker && !markers[key]) return;
+  const setMarkerRef = (marker, id) => {
+    if (marker && markers[id]) return;
+    if (!marker && !markers[id]) return;
 
     setMarkers((prev) => {
       if (marker) {
-        return { ...prev, [key]: marker };
+        return { ...prev, [id]: marker };
       } else {
         const newMarkers = { ...prev };
-        delete newMarkers[key];
+        delete newMarkers[id];
         return newMarkers;
       }
     });
@@ -57,13 +60,13 @@ function CustomMarker() {
           position={l.location}
           title={l.street}
           ref={(marker) => setMarkerRef(marker, l.id)}
-          onClick={() => handleMarkerClick(l.id)}
+          onClick={(e) => handleMarkerClick({ event: e, id: l.id })}
         >
           <img src={PIN_ICONS[l.type]} height={60} width={"auto"} />
           {markerVisibility === l.id && (
             <InfoWindow
-              anchor={markers[l.id]}
-              onClose={() => handleMarkerClick(l.id)}
+              position={l.location}
+              onCloseClick={() => handleMarkerClick({ id: l.id })}
             >
               <Tooltip
                 street={l.street}

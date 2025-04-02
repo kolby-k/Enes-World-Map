@@ -115,8 +115,8 @@ const LOCATIONS = [
     country: "France",
     zip: "",
     location: {
-      lat: 43.55788,
-      lng: 6.9866,
+      lat: 43.55861,
+      lng: 6.9874,
     },
   },
   {
